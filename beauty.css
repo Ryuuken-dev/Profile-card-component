@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: url('images/bg-pattern-top.svg') no-repeat -10% 40%, url('images/bg-pattern-bottom.svg') 110% -40% no-repeat hsl(185, 75%, 39%);
+    --background-space: 25vh;
+    background-size: 100%;
+    --image-container-size: calc(var(--background-space)*1.5);
+    --image-size: calc(var(--image-container-size)/2);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.generalContent {
+    position: relative;
+    width: 40%;
+    left: 30%;
+    top: 50%;
+    transform: translate(0, -50%);
+    z-index: 1;
+    background-color: white;
+    padding: 0 0 3% 0;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.generalContent__middleSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10% 0;
+}
+
+.generalContent__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    padding: 0 2%;
+}
+
+.generalContent__lastSection {
+    margin-top: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.generalContent__imageSection {
+    background-image: url(images/bg-pattern-card.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: var(--background-space);
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+.generalContent__imagePortraitContainer {
+    position: absolute;
+    width: 100%;
+    height: var(--image-container-size);
+    text-align: center;
+    top: calc(var(--image-container-size) / 2 - 10%);
+    
+
+}
+
+.generalContent__elementsContainer {
+    margin-top: 20%;
+}
+
+
+.generalContent__victorImage {
+    width: var(--image-size);
+    border-radius: 50%;
+    border: 4px solid white;
+
+    
+}
+
+.generalContent__firstP, .generalContent__value {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.generalContent__secondP, .generalContent__age {
+    display: inline-block;
+    margin-top: 2%;
+}
+
+.generalContent__age {
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+.generalContent__secondP, .generalContent__letterValue {
+    font-size: 25px;
+}
+
+
+.generalContent__letterValue {
+    margin-top: 5%;
+    color: gray;
+}
+
+
+
+@media(min-width: 239px) and (max-width: 1024px) {
+
+    body {
+        background-size: 40%;
+    }
+
+    .generalContent {
+        width: 90%;
+        left: 5%;
+        padding: 0 0 10% 0;
+    }
+
+    @media(min-width: 240px) and (orientation: portrait) {
+    
+        body {
+            --background-space: 28vh;
+            background: url('images/bg-pattern-top.svg') no-repeat 30% 40%, url('images/bg-pattern-bottom.svg') 80% -240% no-repeat hsl(185, 75%, 39%);
+            
+        }
+    
+        .generalContent__firstP, .generalContent__value {
+            font-size: 18px;
+        }
+    
+        .generalContent__secondP, .generalContent__letterValue {
+            font-size: 16px;
+        }
+
+        .generalContent__elementsContainer {
+            margin-top: 28%;
+        }
+    
+    }
+    
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    
+        body {
+            --background-space: 20vh;
+            background: url('images/bg-pattern-top.svg') no-repeat -30% 40%, url('images/bg-pattern-bottom.svg') 80% -240% no-repeat hsl(185, 75%, 39%);
+            
+        }
+
+        .generalContent__firstP, .generalContent__value {
+            font-size: 25px;
+        }
+
+        .generalContent__secondP, .generalContent__letterValue {
+            font-size: 22px;
+        }
+
+
+    }
+    
+    @media(orientation: landscape) {
+        body {
+            height: 190vh;
+            --background-space: 45vh;
+            background: url(images/bg-pattern-top.svg) no-repeat -615% -55%, url(images/bg-pattern-bottom.svg) 427% 105% no-repeat hsl(185, 75%, 39%);
+            
+        }
+    
+        .generalContent {
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+
+    @media only screen and (min-device-width: 600px) and (orientation: portrait) {
+        .generalContent__firstP, .generalContent__value {
+            font-size: 30px;
+        }
+    
+        .generalContent__secondP, .generalContent__letterValue {
+            font-size: 22px;
+        }
+       
+    }
+
+    @media only screen and (min-device-width: 640px) and (orientation: landscape) {
+        body {
+            --background-space: 48vh;
+
+        }
+
+        .generalContent {
+            width: 80%;
+            left: 10%;
+        }
+    }
+
+
+    @media only screen and (min-device-width: 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+        body {
+            --background-space: 21vh;
+            background: url(images/bg-pattern-top.svg) no-repeat -90% 15%, url(images/bg-pattern-bottom.svg) 240% -100% no-repeat hsl(185, 75%, 39%);
+            background-size: 75%;
+        }
+    
+        .generalContent__elementsContainer {
+            margin-top: 20%;
+        }
+    
+        .generalContent__firstP, .generalContent__value {
+            font-size: 35px;
+        }
+    
+        .generalContent__secondP, .generalContent__letterValue {
+            font-size: 30px;
+        }
+    }
+    
+    @media only screen and (min-device-width: 768px) and (max-device-width : 1024px) and (orientation: landscape) {
+        .generalContent__elementsContainer {
+            margin-top: 25%;
+        }
+
+        .generalContent__firstP, .generalContent__value {
+            font-size: 28px;
+        }
+    
+        .generalContent__secondP, .generalContent__letterValue {
+            font-size: 20px;
+        }
+
+        body {
+            --background-space: 42vh;
+        }
+    }
+
+}
+
+@media only screen  and (min-width: 1224px) {
+    .generalContent__firstP, .generalContent__value {
+        font-size: 34px;
+    }
+
+    .generalContent__secondP, .generalContent__letterValue {
+        font-size: 26px;
+    }
+
+    body {
+        background: url('images/bg-pattern-top.svg') no-repeat -110% 351%, url('images/bg-pattern-bottom.svg') 200% -340% no-repeat hsl(185, 75%, 39%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+    
